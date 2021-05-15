@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %} 
+{% block content %}
+    <h3>Articles List</h3>
+    <ul>
+        {% for item in object %}
+            <li>
+                <p>Title: {{ item.title }}</p>
+                <p>Description: {{ item.description }}</p>
+                <p>Author: {{ item.author }}</p>
+                <a href="{% url 'blog:article_detail' pk=item.id %}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

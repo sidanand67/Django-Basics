@@ -1,0 +1,16 @@
+{% extends 'product/base.html' %}
+{% block content %}
+    <h3>All Products Page</h3>
+    <p>Go back to <a href="{% url 'product:index' %}">Home Page.</a></p>
+    <ul>
+        {% for dt in data %}
+            <li>
+               <h3>Product Name: {{ dt.name }}</h3>
+                <h5>Product Description: {{ dt.description }}</h5>
+                <h4>Product Price: {{ dt.price }}</h4>
+                <button><a href="{% url 'product:update' pk=dt.id %}">Update</a></button>
+                <button><a href="{% url 'product:delete' pk=dt.id %}">Delete</a></button>
+            </li>
+        {% endfor %}
+    </uid
+{% endblock %}

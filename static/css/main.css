@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    padding: 10px;
+    margin: 10px;
+}
+
+form{
+    margin: 10px;
+}
+
+p{
+    padding: 5px;
+}
+
+ul li{
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+}

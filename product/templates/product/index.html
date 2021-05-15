@@ -1,0 +1,11 @@
+{% extends 'product/base.html' %}
+{% block content %}
+    <h3>Home Page</h3>
+    <p>Go to <a href="{% url 'product:result'%}">all products page.</a></p>
+    <form method="POST">
+        <h3>Fill this form</h3>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
